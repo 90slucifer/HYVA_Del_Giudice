@@ -12,7 +12,7 @@ const ItemListContainer = ({texto}) => {
         }, 2000);
     })
         useEffect(() => {
-            getData.them((result) => {
+            getData.then((result) => {
                 setItems(result);
             })
         }, []);
