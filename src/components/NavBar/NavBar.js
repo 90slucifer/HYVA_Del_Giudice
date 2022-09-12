@@ -1,6 +1,7 @@
 import logo from '../../logo.svg';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
+import {Link, NavLink} from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -11,10 +12,10 @@ const NavBar = () => {
             <div>
                 <ul>
                     <li>
-                        <a href="#">Inicio</a>
+                    <NavLink className={({isActive})=>isActive ? "claseActive" : "claseInactive"} to="/">Inicio</NavLink>
                     </li>
                     <li>
-                        <a href="#">Conocenos</a>
+                    <NavLink className={({isActive})=>isActive ? "claseActive" : "claseInactive"} to="/products/BMW">BMW</NavLink>
                     </li>
                     <li>
                         <a href="#">Contacto</a>
