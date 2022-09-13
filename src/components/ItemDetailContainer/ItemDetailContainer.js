@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = ({texto}) => {
     const {productId} = useParams();
-    const [item, setItem] = useState([]);
+    const [item, setItem] = useState({});
 
     const getItem = (id)=>{
         return new Promise((resolve, reject)=>{
@@ -17,7 +17,7 @@ const ItemDetailContainer = ({texto}) => {
     useEffect(()=>{
         const getProduct = async()=>{
             const product = await getItem(productId);
-            console.log('product', product)
+            console.log('producto', product)
             setItem(product);
         }
         getProduct();
@@ -26,9 +26,9 @@ const ItemDetailContainer = ({texto}) => {
     console.log('item:', item)
 
     return (
-        <>
-        <ItemDetail item={item} />
-        </>
+        <div>
+            <ItemDetail item={item} />
+        </div>
     );
 
 };
