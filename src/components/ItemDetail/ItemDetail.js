@@ -1,6 +1,7 @@
 
 
-export const ItemDetail = ({id, brand, model, year, image, price, description}) => {
+ const ItemDetail = ({item}) => {
+    const { image, model, brand, year, description, price } = item
     return (
         <div>
             <img src={image} alt={model} />
