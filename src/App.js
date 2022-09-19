@@ -5,10 +5,11 @@ import ItemCount from './components/ItemCount/ItemCount';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartContaienr } from './components/CartContainer/CartContainer';
-
+import { ThemeContext } from './context/ThemeContext';
 
 function App() {
   return (
+    <ThemeContext.Provider value={{texto:"Primer texto del xontexto"}}>
     <BrowserRouter>
     <div className="App">
       <NavBar/>
@@ -23,6 +24,7 @@ function App() {
       </header>
     </div>
     </BrowserRouter>
+    </ThemeContext.Provider>
   );
 }
 
