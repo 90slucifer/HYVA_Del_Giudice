@@ -21,8 +21,24 @@ export const CartProvider = ({children})=>{
         setProductCartList(newArrangement);
     }
 
+    const clearItems = () => {
+        setProductCartList([]);
+      };
+
+    const isInCart = (itemId) => {
+        const productExists = productCartList.find((item) => item.id === itemId);
+    
+        if (productExists !== undefined) {
+    
+          return true;
+        } else {
+          console.log('false');
+          return false;
+        }
+      };
+
     return(
-        <CartContext.Provider value={{productCartList, addItem, removeItem}}>
+        <CartContext.Provider value={{productCartList, addItem, removeItem, clearItems, isInCart}}>
             {children}
         </CartContext.Provider>
     )
