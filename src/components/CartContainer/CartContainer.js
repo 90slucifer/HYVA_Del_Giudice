@@ -1,9 +1,20 @@
 import React, {useContext} from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-export const CartContaienr = () => {
-    const value = useContext(ThemeContext);
+import { CartContext } from "../../context/CartContext";
 
+
+export const CartContaienr = () => {
+    const {productCartList, removeItem} = useContext(CartContext);
     return (
-        <div>{value.texto}</div>
+        <div>
+            CartContaienr
+            <div>
+                {productCartList.map(item=>(
+                    <>
+                    <p>{item.model} - {item.quantity}</p>
+                    <button onClick={()=>removeItem(item.id)}>Quitar Producto</button>
+                    </>
+                ))}
+            </div>
+        </div>
     )
 }

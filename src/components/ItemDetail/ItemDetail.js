@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import  ItemCount from "../ItemCount/ItemCount"
+import { CartContext } from "../../context/CartContext";
 
  const ItemDetail = ({item}) => {
+    const {addItem} = useContext(CartContext);
     const { image, model, brand, year, description, price } = item;
     const [counter, setCounter] = useState(0);
     const onAdd = (datum)=>{
         setCounter(datum)
+        addItem(item, datum)
     }
 
     return (
