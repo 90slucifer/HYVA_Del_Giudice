@@ -16,6 +16,8 @@ export const CartProvider = ({children})=>{
         setProductCartList(newArrangement);
     }
 
+    const isInCart = (id) => { return productCartList.some(prod => prod.id === id) }
+
     const removeItem = (itemId)=>{
         const newArrangement = productCartList.filter(product=>product.id !== itemId);
         setProductCartList(newArrangement);
@@ -23,18 +25,6 @@ export const CartProvider = ({children})=>{
 
     const clearItems = () => {
         setProductCartList([]);
-      };
-
-    const isInCart = (itemId) => {
-        const productExists = productCartList.find((item) => item.id === itemId);
-    
-        if (productExists !== undefined) {
-    
-          return true;
-        } else {
-          console.log('false');
-          return false;
-        }
       };
 
     return(
