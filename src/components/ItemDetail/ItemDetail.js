@@ -19,10 +19,7 @@ import { Link } from "react-router-dom"
             <h1>{brand} {model}</h1>
             <p>{year} ${price}</p>
             <p>{description}</p>
-            {!isInCart(item.id)
-                ? <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-                : <Link to="/cart">  Terminar mi compra </Link>
-            }
+            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
         </div>
     )
 }

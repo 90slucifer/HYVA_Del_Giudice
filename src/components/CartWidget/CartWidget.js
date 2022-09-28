@@ -8,6 +8,7 @@ const CartWidget = () => {
         <div>
             <Link to="/cart">
             <img src={cart} />
+            <span>2</span>
             </Link>
         </div>
     );

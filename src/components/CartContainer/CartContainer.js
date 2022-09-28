@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 
@@ -6,7 +7,8 @@ export const CartContaienr = () => {
     const {productCartList, removeItem, clearItems} = useContext(CartContext);
     return (
         <div>
-            CartContaienr
+            {
+              productCartList.length > 0 ?
             <div>
                 {productCartList.map(item=>(
                     <>
@@ -16,6 +18,14 @@ export const CartContaienr = () => {
                     </>
                 ))}
             </div>
+            :
+            <>
+              <p>El carrito esta Vacio</p>
+              <Link to="/">
+              Ir a la pagina principal
+              </Link>
+            </>
+            }
         </div>
     )
 }
