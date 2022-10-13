@@ -26,7 +26,7 @@ const ItemListContainer = ({texto}) => {
         },[brandId])
     return (
         <div className="item-list-container">
-            <p>item list container</p>
+            <br></br>
                 <ItemList itemsList={items} />
         </div>
     );
