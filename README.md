@@ -1,3 +1,11 @@
+
+-------------------------Proyecto Ecomerce Historia Y Venta Automoviles---------------------
+
+Mi proyecto es un ecomerce sobre venta de vehiculos usados por concesionaria, donde el usuario entraria a la pagina de dicha consecionaria y podria elegir alguno de los vehiculos que estan en stock.
+
+Para este proyecto me estoy enfocando a full en lo funcional y para nada en lo visual/experiencia, al menos por ahora, ya que para terminar de entender como funciona todo necesito estar concentrado 100% en aprender mas de react y de JS.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
